@@ -272,12 +272,6 @@ coroutine.wrap(pcall)(function()
                 end
             end
         else
-            StarterGui:SetCore("SendNotification", {
-                Title = "discord.gg/rips",
-                Text = "FPS Cap Failed",
-                Duration = math.huge,
-                Button1 = "Okay"
-            })
             warn("FPS Cap Failed")
         end
     end
@@ -302,13 +296,6 @@ for i, v in pairs(Descendants) do
         WaitNumber = WaitNumber + StartNumber
     end
 end
-StarterGui:SetCore("SendNotification", {
-    Title = "discord.gg/rips",
-    Text = "FPS Booster Loaded!",
-    Duration = math.huge,
-    Button1 = "Okay"
-})
-warn("FPS Booster Loaded!")
 --game.DescendantAdded:Connect(CheckIfBad)
 --[[game.DescendantAdded:Connect(function(value)
     CheckIfBad(value)
