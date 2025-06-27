@@ -62,7 +62,8 @@ local function BoostPerformance()
             }
         }
     }
-    
+
+    local cfg = Settings.Config
     local function IsDescendantOfIgnore(instance)
         for _, ignore in pairs(Settings.Ignore) do
             if instance:IsDescendantOf(ignore) then
@@ -82,7 +83,6 @@ local function BoostPerformance()
     end
     
     local function CheckIfBad(instance)
-        local cfg = Settings.Config
         if not instance:IsDescendantOf(Players) and
             (cfg.Players["Ignore Others"] and not IsPartOfOtherCharacter(instance) or not cfg.Players["Ignore Others"]) and
             (cfg.Players["Ignore Me"] and LocalPlayer.Character and not instance:IsDescendantOf(LocalPlayer.Character) or not cfg.Players["Ignore Me"]) and
