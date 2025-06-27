@@ -220,7 +220,7 @@ local function BoostPerformance()
     
     if cfg.Other["FPS Cap"] and setfpscap then
         coroutine.wrap(function()
-            while task.wait(300) do
+            while task.wait(72e3) do
                 setfpscap(cfg.Other["FPS Cap"])
             end
         end)()
